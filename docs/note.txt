@@ -1,0 +1,29 @@
+mkdir abc
+frontend
+npm create vite@latest . -- --template react
+or
+npm create vite@latest frontend -- --template react
+npm install
+
+
+backend
+
+Project:        Maven
+Language:       Java
+Spring Boot:    3.5.x
+
+Group:          com.iacoffee
+Artifact:       backend
+Name:           backend
+
+Packaging:      Jar
+Configuration:  YAML
+Java:           21
+
+Dependencies:
+✔ Spring Web
+✔ Spring Data JPA
+✔ MySQL Driver
+✔ Validation
+✔ Lombok
+✔ Docker Compose Support
