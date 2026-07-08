@@ -7,7 +7,7 @@
   background: rgba(23, 17, 14, 0.95);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid #3a2a22;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 .container {
@@ -20,6 +20,8 @@
   gap: 16px;
 }
 
+/* ===== Logo ===== */
+
 .logo {
   display: flex;
   align-items: center;
@@ -29,7 +31,7 @@
 }
 
 .logoMark {
-  font-family: 'Fraunces', serif;
+  font-family: "Fraunces", serif;
   font-size: 24px;
   letter-spacing: -0.02em;
   color: #faf6ef;
@@ -49,6 +51,8 @@
   padding-left: 8px;
 }
 
+/* ===== Navigation ===== */
+
 .nav {
   display: none;
   align-items: center;
@@ -59,29 +63,62 @@
 .navLink {
   color: #e4d9cb;
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: color .25s;
 }
 
 .navLink:hover {
   color: #a9754f;
 }
 
-.ctaButton {
+/* ===== Auth Buttons ===== */
+
+.authButtons {
   display: none;
   align-items: center;
+  gap: 12px;
+}
+
+.loginButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 20px;
+  border: 1px solid #8c6547;
+  border-radius: 999px;
+  color: #e8ddd0;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all .25s ease;
+}
+
+.loginButton:hover {
+  background: rgba(169, 117, 79, .15);
+  border-color: #a9754f;
+  color: #fff;
+}
+
+.registerButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 22px;
   border-radius: 999px;
   background: #a9754f;
   color: #17110e;
-  font-size: 14px;
-  font-weight: 500;
-  padding: 8px 20px;
   text-decoration: none;
-  transition: background 0.2s ease;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all .25s ease;
 }
 
-.ctaButton:hover {
+.registerButton:hover {
   background: #c48d61;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(169, 117, 79, .25);
 }
+
+/* ===== Mobile Toggle ===== */
 
 .mobileToggle {
   display: flex;
@@ -93,24 +130,29 @@
   cursor: pointer;
 }
 
-.bar {
-  width: 24px;
+.bar,
+.barShort {
   height: 2px;
   background: #faf6ef;
 }
 
+.bar {
+  width: 24px;
+}
+
 .barShort {
   width: 16px;
-  height: 2px;
-  background: #faf6ef;
 }
+
+/* ===== Mobile Menu ===== */
 
 .mobileNav {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  padding: 20px 24px;
   border-top: 1px solid #3a2a22;
-  padding: 16px 24px;
+  background: rgba(23, 17, 14, .98);
 }
 
 .mobileNavLink {
@@ -123,32 +165,56 @@
   color: #a9754f;
 }
 
-.mobileCta {
-  display: inline-flex;
+.mobileLogin,
+.mobileRegister {
+  display: flex;
   justify-content: center;
+  align-items: center;
+  padding: 12px;
   border-radius: 999px;
-  background: #a9754f;
-  color: #17110e;
-  font-size: 14px;
-  font-weight: 500;
-  padding: 8px 20px;
   text-decoration: none;
+  font-weight: 600;
+  transition: .25s;
 }
 
-/* ---- Desktop breakpoint (>=768px), tương đương md: của Tailwind ---- */
+.mobileLogin {
+  border: 1px solid #8c6547;
+  color: #e8ddd0;
+}
+
+.mobileLogin:hover {
+  background: rgba(169, 117, 79, .15);
+}
+
+.mobileRegister {
+  background: #a9754f;
+  color: #17110e;
+}
+
+.mobileRegister:hover {
+  background: #c48d61;
+}
+
+/* ===== Desktop ===== */
+
 @media (min-width: 768px) {
+
   .logoSub {
     display: inline;
   }
+
   .nav {
     display: flex;
   }
-  .ctaButton {
-    display: inline-flex;
+
+  .authButtons {
+    display: flex;
   }
+
   .mobileToggle {
     display: none;
   }
+
   .mobileNav {
     display: none;
   }

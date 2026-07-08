@@ -1,0 +1,63 @@
+.eyebrowDark {
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.25em;
+  color: #4a2e22;
+  margin-bottom: 12px;
+}
+
+/* GIỚI THIỆU */
+.aboutSection {
+  background: #f5ede4;
+  color: #17110e;
+}
+
+.aboutInner {
+  max-width: 1152px;
+  margin: 0 auto;
+  padding: 80px 24px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.aboutVisual {
+  border-radius: 24px;
+  background: linear-gradient(to bottom right, #4a2e22, #17110e);
+  aspect-ratio: 4 / 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  order: 2;
+}
+
+.aboutQuote {
+  font-family: 'Fraunces', serif;
+  color: #a9754f;
+  font-size: 18px;
+  text-align: center;
+  padding: 0 32px;
+}
+
+.sectionTitleDark {
+  font-family: 'Fraunces', serif;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.aboutText {
+  color: #4a3226;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+/* ---------- Desktop breakpoint ---------- */
+@media (min-width: 768px) {
+  .aboutInner {
+    grid-template-columns: 1fr 1fr;
+  }
+  .aboutVisual {
+    order: 1;
+  }
+}

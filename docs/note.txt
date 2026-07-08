@@ -27,3 +27,52 @@ Dependencies:
 ✔ Validation
 ✔ Lombok
 ✔ Docker Compose Support
+
+ai - service
+1. Vào thư mục project
+cd ai-service
+2. Tạo môi trường ảo (Virtual Environment)
+py -m venv .venv
+3. Kích hoạt môi trường ảo
+PowerShell
+.venv\Scripts\Activate.ps1
+CMD
+.venv\Scripts\activate.bat
+
+Khi thành công sẽ thấy:
+(.venv)
+4. Nâng cấp pip (khuyến nghị)
+python -m pip install --upgrade pip
+5. Cài thư viện
+pip install fastapi uvicorn
+Nếu dùng AI:
+pip install google-genai python-dotenv
+hoặc
+pip install openai python-dotenv
+6. Lưu danh sách thư viện
+pip freeze > requirements.txt
+7. Tạo cấu trúc project
+ai-service/
+│
+├── app/
+│   ├── __init__.py
+│   └── main.py
+│
+├── .venv/
+├── requirements.txt
+└── .gitignore
+8. Chạy FastAPI
+uvicorn app.main:app --reload
+9. Kiểm tra
+API:
+http://127.0.0.1:8000
+Swagger:
+http://127.0.0.1:8000/docs
+10. Thoát môi trường ảo
+deactivate
+
+Khi mở project vào ngày hôm sau
+Chỉ cần:
+cd ai-service
+.venv\Scripts\Activate.ps1
+uvicorn app.main:app --reload

@@ -1,0 +1,136 @@
+.eyebrow {
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.25em;
+  color: #a9754f;
+  margin-bottom: 12px;
+}
+
+.accentText {
+  color: #a9754f;
+}
+
+/* ---------- HERO ---------- */
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.heroInner {
+  max-width: 1152px;
+  margin: 0 auto;
+  padding: 80px 24px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.heroTitle {
+  font-family: 'Fraunces', serif;
+  font-size: 42px;
+  line-height: 1.05;
+  margin-bottom: 24px;
+}
+
+.heroDesc {
+  color: #c9b8a8;
+  font-size: 16px;
+  max-width: 420px;
+  margin-bottom: 32px;
+}
+
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.primaryBtn {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  background: #a9754f;
+  color: #17110e;
+  font-weight: 500;
+  padding: 12px 24px;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.primaryBtn:hover {
+  background: #c48d61;
+}
+
+.secondaryBtn {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  border: 1px solid #4a2e22;
+  color: #faf6ef;
+  font-weight: 500;
+  padding: 12px 24px;
+  text-decoration: none;
+  transition: border-color 0.2s ease;
+}
+
+.secondaryBtn:hover {
+  border-color: #a9754f;
+}
+
+.dropDivider {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  padding-bottom: 40px;
+  opacity: 0.7;
+}
+
+.dropIcon {
+  width: 12px;
+  height: 12px;
+  color: #a9754f;
+}
+
+/* ---------- Phin graphic ---------- */
+.phinWrap {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  aspect-ratio: 1 / 1;
+  margin: 0 auto;
+}
+
+.phinSvg {
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes phinDrip {
+  0%   { transform: translateY(0);   opacity: 0; }
+  15%  { opacity: 1; }
+  85%  { opacity: 1; }
+  100% { transform: translateY(150px); opacity: 0; }
+}
+
+.phinDrop {
+  animation: phinDrip 2.6s ease-in infinite;
+}
+
+.phinDrop:nth-child(2) {
+  animation-delay: 0.9s;
+}
+
+.phinDrop:nth-child(3) {
+  animation-delay: 1.8s;
+}
+
+/* ---------- Desktop breakpoint (>=768px) ---------- */
+@media (min-width: 768px) {
+  .heroInner {
+    grid-template-columns: 1fr 1fr;
+  }
+  .heroTitle {
+    font-size: 56px;
+  }
+}
